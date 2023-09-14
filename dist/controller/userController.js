@@ -15,7 +15,7 @@ const signin = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         let response = yield (0, userService_1.signinService)(req.body);
         if (response) {
-            res.status(response.status).send(response.data);
+            res.status(response.status).send(response);
         }
     }
     catch (error) {

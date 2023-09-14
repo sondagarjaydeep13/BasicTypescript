@@ -6,7 +6,7 @@ export const signin = async (req: Request<{}, {}, IuserModel>, res: Response) =>
     try {
         let response: Iresponse | undefined = await signinService(req.body);
         if (response) {
-            res.status(response.status).send(response.data);
+            res.status(response.status).send(response);
         }
     } catch (error) {
         console.log('Error,userController:signin', error);
